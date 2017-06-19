@@ -13,7 +13,7 @@ def seconds_difference(time_1, time_2):
     >>> seconds_difference(1800.0, 1800.0)
     0.0
     """
-    return max(time_1, time_2) - min(time_1, time_2)
+    return time_2 - time_1
 
 
 
@@ -32,7 +32,7 @@ def hours_difference(time_1, time_2):
     >>> hours_difference(1800.0, 1800.0)
     0.0
     """
-    return max(time_1, time_2) - min(time_1, time_2)
+    return (seconds_difference(time_1, time_2) / 60) / 60
 
 
 def to_float_hours(hours, minutes, seconds):
